@@ -13,8 +13,10 @@ public class KelompokTA {
     private String topik;
     private Mahasiswa[] anggota;
     private int jumlahAnggota;
+    private String nomor;
 
-    public KelompokTA(String topik) {
+    public KelompokTA(String topik, String nomor) {
+        this.nomor = nomor;
         this.topik = topik; 
         anggota = new Mahasiswa[3];
         jumlahAnggota = 0;
@@ -51,5 +53,13 @@ public class KelompokTA {
     
     public Mahasiswa getAnggota(int index){
         return anggota[index];
+    }
+    
+    public String getTopik(){
+        return this.topik;
+    }
+    
+    public String getNomor(){
+        return this.nomor;
     }
 }
