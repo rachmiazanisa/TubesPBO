@@ -14,7 +14,7 @@ public class Mahasiswa {
     private TugasAkhir tugasAkhir;
     private String statusMahasiswa;
     private String nim;
-   
+     
     public void setNim(String nim){
         this.nim=nim;
     }
