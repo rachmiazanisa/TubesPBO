@@ -29,9 +29,9 @@ public class KelompokTA {
     
     public void removeAnggota(Mahasiswa m){
         int i = 0;
-        while((anggota[i] != null) && (anggota[i].getNim() == m.getNim())){
+        while((anggota[i] != null) && (anggota[i].getNim() != m.getNim())){
             i++;
-        }
+        }   
         if(anggota[i] != null){
             anggota[i] = null;
         }
@@ -39,7 +39,7 @@ public class KelompokTA {
     
     public Mahasiswa getAnggota(String nim){
         int i = 0;
-        while((anggota[i] != null) && (anggota[i].getNim() == nim)){
+        while((anggota[i] != null) && (anggota[i].getNim() != nim)){
             i++;
         }
         if(anggota[i] != null){
