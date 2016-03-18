@@ -13,8 +13,10 @@ public class KelompokTA {
     private String topik;
     private Mahasiswa[] anggota;
     private int jumlahAnggota;
+    private String nomor;
 
-    public KelompokTA(String topik) {
+    public KelompokTA(String topik, String nomor) {
+        this.nomor = nomor;
         this.topik = topik; 
         anggota = new Mahasiswa[3];
         jumlahAnggota = 0;
@@ -29,17 +31,17 @@ public class KelompokTA {
     
     public void removeAnggota(Mahasiswa m){
         int i = 0;
-        while((anggota[i] != null) && (anggota[i].getNIM() == m.getNIM())){
+        while((anggota[i] != null) && (anggota[i].getNim() != m.getNim())){
             i++;
-        }
+        }   
         if(anggota[i] != null){
             anggota[i] = null;
         }
     }
     
-    public Mahasiswa getAnggota(String NIM){
+    public Mahasiswa getAnggota(String nim){
         int i = 0;
-        while((anggota[i] != null) && (anggota[i].getNIM() == NIM)){
+        while((anggota[i] != null) && (anggota[i].getNim() != nim)){
             i++;
         }
         if(anggota[i] != null){
@@ -51,5 +53,13 @@ public class KelompokTA {
     
     public Mahasiswa getAnggota(int index){
         return anggota[index];
+    }
+    
+    public String getTopik(){
+        return this.topik;
+    }
+    
+    public String getNomor(){
+        return this.nomor;
     }
 }
