@@ -9,7 +9,7 @@ package tubespbo;
  *
  * @author alvinmatias69
  */
-public class Orang {
+public abstract class Orang {
     private String nama;
     private String alamat;
     private String ttl;
