@@ -11,8 +11,12 @@ package tubespbo;
  * @author Rachmi
  */
 public class TugasAkhir {
-    private Dosen pembimbing[]=new Dosen[2];
+    private Dosen[] pembimbing=new Dosen[2];
     private String judulTA;
+    
+    public TugasAkhir(String judul){
+        this.judulTA=judul;
+    }
     
     public void setPembimbing(Dosen d, int i){
         if (i==1){
@@ -31,9 +35,9 @@ public class TugasAkhir {
     }
     
     public Dosen getPembimbing(String kodeDosen){
-        if(pembimbing[0].kodeDosen==kodeDosen){
+        if(pembimbing[0].getkodeDosen()==kodeDosen){
             return pembimbing[0];
-        }else if(pembimbing[1].kodeDosen==kodeDosen){
+        }else if(pembimbing[1].getkodeDosen()==kodeDosen){
             return pembimbing[0];
         }else{
             return null;

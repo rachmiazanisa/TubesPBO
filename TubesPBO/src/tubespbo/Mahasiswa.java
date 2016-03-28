@@ -10,10 +10,14 @@ package tubespbo;
  *
  * @author Rachmi
  */
-public class Mahasiswa {
+public class Mahasiswa extends Orang{
     private TugasAkhir tugasAkhir;
     private String statusMahasiswa;
     private String nim;
+
+    public Mahasiswa(String nama, String gender) {
+        super(nama, gender);
+    }
      
     public void setNim(String nim){
         this.nim=nim;
@@ -24,6 +28,6 @@ public class Mahasiswa {
     }
     
     public void createTA(String judul){
-        TugasAkhir tugasAkhir=new TugasAKhir(judul);
+        tugasAkhir = new TugasAkhir(judul);
     }
 }

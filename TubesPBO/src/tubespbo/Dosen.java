@@ -9,22 +9,25 @@ package tubespbo;
  *
  * @author Dian Dwi Arini
  */
-public class Dosen {
+public class Dosen extends Orang{
     private KelompokTA[] topikTA;
     private int statusPembimbing;
     private String kodeDosen;
     private int jumlahKelompok;
     
-    public Dosen(int statusPembimbing, String kodeDosen){
-        KelompokTA[] topikTA = new KelompokTA[3];
+    public Dosen(int statusPembimbing, String kodeDosen, String nama, String gender){
+        super(nama, gender);
+        topikTA = new KelompokTA[3];
         this.statusPembimbing=statusPembimbing;
         this.kodeDosen=kodeDosen;
-        
     }
     public void setkodeDosen(String kodeDosen){
         this.kodeDosen=kodeDosen;
     }
     
+    public String getkodeDosen(){
+        return kodeDosen;
+    }
     public String kodeDosen(){
         return kodeDosen;
     }
