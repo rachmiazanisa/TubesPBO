@@ -30,4 +30,8 @@ public class Mahasiswa extends Orang{
     public void createTA(String judul){
         tugasAkhir = new TugasAkhir(judul);
     }
+
+    public TugasAkhir getTugasAkhir() {
+        return tugasAkhir;
+    }
 }
