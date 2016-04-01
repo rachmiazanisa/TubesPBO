@@ -34,4 +34,9 @@ public class Mahasiswa extends Orang{
     public TugasAkhir getTugasAkhir() {
         return tugasAkhir;
     }
+
+    public void setStatusMahasiswa(String statusMahasiswa) {
+        this.statusMahasiswa = statusMahasiswa;
+    }
+   
 }
