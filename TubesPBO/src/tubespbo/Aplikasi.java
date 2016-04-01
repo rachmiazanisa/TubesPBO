@@ -117,7 +117,17 @@ public class Aplikasi {
         System.out.println("3. Kembali ke menu utama");
         int pil = scan.nextInt();
         switch(pil){
-            case 1: break;
+            case 1: System.out.println("Masukkan data dosen");
+                    System.out.print("Kode Dosen        : ");
+                    String tmpKode = scan.nextLine();
+                    System.out.print("Nama              : ");
+                    String tmpNama = scan.nextLine();
+                    System.out.print("Gender            : ");
+                    String tmpGender = scan.nextLine();
+                    System.out.print("Status Pembimbing : ");
+                    int tmpStatus = scan.nextInt();
+                    Dosen d = new Dosen(tmpStatus, tmpKode, tmpNama, tmpGender);
+                    break;
             case 2: menuLogin(1);
                     break;
             case 3: this.menuMain();
@@ -134,7 +144,19 @@ public class Aplikasi {
         System.out.println("3. Kembali ke menu utama");
         int pil = scan.nextInt();
         switch(pil){
-            case 1: break;
+            case 1: System.out.println("Masukkan data mahasiswa");
+                    System.out.print("NIM   : ");
+                    String tmpNim = scan.nextLine();
+                    System.out.print("Nama  : ");
+                    String tmpNama = scan.nextLine();
+                    System.out.print("Gender: ");
+                    String tmpGender = scan.nextLine();
+                    System.out.print("Status: ");
+                    String tmpStatus = scan.nextLine();
+                    Mahasiswa m = new Mahasiswa(tmpNama, tmpGender);
+                    m.setNim(tmpNim);
+                    m.setStatusMahasiswa(tmpStatus);
+                    break;
             case 2: menuLogin(2);
                     break;
             case 3: this.menuMain();
@@ -196,11 +218,7 @@ public class Aplikasi {
             case 4: System.out.println("Masukkan NIM mahasiswa");
                     String tmpNim = scan.nextLine();
                     if(this.getMahasiswa(tmpNim) != null){
-                        System.out.println("Masukkan jenis pembimbing (1/2)");
-                        int tmpPembimbing = scan.nextInt();
-                        if( (tmpPembimbing == 1) && (tmpPembimbing == 2) ){
-                            this.getMahasiswa(tmpNim).getTugasAkhir().setPembimbing(d, tmpPembimbing);
-                        }
+                            this.getMahasiswa(tmpNim).getTugasAkhir().setPembimbing(d, d.getStatusPembimbing());
                     }
                     break;         
             case 5: this.menuMain();

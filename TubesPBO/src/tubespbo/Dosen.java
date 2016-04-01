@@ -14,6 +14,10 @@ public class Dosen extends Orang{
     private int statusPembimbing;
     private String kodeDosen;
     private int jumlahKelompok;
+
+    public int getStatusPembimbing() {
+        return statusPembimbing;
+    }
     
     public Dosen(int statusPembimbing, String kodeDosen, String nama, String gender){
         super(nama, gender);
