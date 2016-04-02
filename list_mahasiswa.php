@@ -7,7 +7,7 @@
 <body>
 	<?php
 		include 'database.php';
-		$sql = "select * from Mahasiswa where id_dosen_wali = '" . $_SESSION['id_dosen'] . "';";
+		$sql = "select id_mhs, nama_mhs, angkatan from Mahasiswa where id_dosen_wali = '" . $_SESSION['id_dosen'] . "';";
 		$stmt = $conn->prepare($sql);
 		$stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);

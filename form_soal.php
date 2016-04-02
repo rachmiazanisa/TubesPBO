@@ -17,7 +17,7 @@
 				'tanggal' 		=> htmlspecialchars($_POST['tanggal']),
 				'link_materi'	=> htmlspecialchars($_POST['link_soal'])
 			);
-			$sql = "insert into Soal(id_dosen, tanggal, link_soal) values('" . $data['id_dosen'] . "', '" . $data['tanggal'] . "', '" . $data['link_soal'] . "');";
+			$sql = "insert into Soal(id_soal, id_dosen, tanggal, link_soal) values('" . $data['id_soal'] . "', '" . $data['id_dosen'] . "', '" . $data['tanggal'] . "', '" . $data['link_soal'] . "');";
 			$conn->exec($sql);
 		}
 	?>

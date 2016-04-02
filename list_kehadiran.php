@@ -13,7 +13,7 @@
 	<?php
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			include 'database.php';
-			$sql = "select * from Kehadiran k join Mahasiswa m on (k.id_mhs = m.id_mhs) where tanggal = '" . $_POST['tanggal'] . "' and id_dosen_wali = '" . $_SESSION['id_dosen'] . "';";
+			$sql = "select tanggal, id_mhs, nama_mhs from Kehadiran join Mahasiswa using (id_mhs) where tanggal = '" . $_POST['tanggal'] . "' and id_dosen_wali = '" . $_SESSION['id_dosen'] . "';";
 			$stmt = $conn->prepare($sql);
 			$stmt->execute();
 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
