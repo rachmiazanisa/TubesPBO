@@ -7,12 +7,13 @@
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			include 'database.php';
 			$data = array(
-				'id_mhs' => htmlspecialchars($_POST['id_mhs']), 
-				'nama_mhs' => htmlspecialchars($_POST['nama_mhs']),
-				'angkatan' => htmlspecialchars($_POST['angkatan']),
-				'id_dosen_wali' => htmlspecialchars($_POST['id_dosen'])
+				'id_mhs' 		=> htmlspecialchars($_POST['id_mhs']), 
+				'nama_mhs' 		=> htmlspecialchars($_POST['nama_mhs']),
+				'angkatan' 		=> htmlspecialchars($_POST['angkatan']),
+				'id_dosen_wali' => htmlspecialchars($_POST['id_dosen']),
+				'password'		=> md5(htmlspecialchars($_POST['password']))
 			);
-			$sql = "insert into Mahasiswa(id_mhs, nama_mhs, angkatan, id_dosen_wali) values ('" . $data['id_mhs'] . "', '" . $data['nama_mhs'] . "', '" . $data['angkatan'] . "', '" . $data['id_dosen_wali'] . "');";
+			$sql = "insert into Mahasiswa(id_mhs, nama_mhs, angkatan, id_dosen_wali, password) values ('" . $data['id_mhs'] . "', '" . $data['nama_mhs'] . "', '" . $data['angkatan'] . "', '" . $data['id_dosen_wali'] . "', '" . $data['password'] . "');";
 			try {
 				$conn->exec($sql);
 			} catch (PDOException $e) {
@@ -31,6 +32,7 @@
 	<?php echo $error; ?>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		ID Mahasiswa : <input type="number" name="id_mhs" min="1000000000" max="9999999999" required><br>
+		Password : <input type="password" name="password" required><br>
 		Nama Mahasiswa : <input type="text" name="nama_mhs" required><br>
 		Angkatan : <input type="number" name="angkatan" min="2010" max="3000" required><br>
 		ID Dosen Wali : <input type="text" name="id_dosen" required><br>

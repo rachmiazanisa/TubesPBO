@@ -8,9 +8,10 @@
 			include 'database.php';
 			$data = array(
 				'id_dosen' 		=> htmlspecialchars($_POST["id_dosen"]), 
-				'nama_dosen'	=> htmlspecialchars($_POST["nama_dosen"])
+				'nama_dosen'	=> htmlspecialchars($_POST["nama_dosen"]),
+				'password'		=> md5(htmlspecialchars($_POST["password"]))
 			);
-			$sql = "insert into Dosen(id_dosen,nama_dosen) values ('" . $data['id_dosen'] . "', '" . $data['nama_dosen'] . "');";
+			$sql = "insert into Dosen(id_dosen,nama_dosen,password) values ('" . $data['id_dosen'] . "', '" . $data['nama_dosen'] . "', '" . $data['password'] . "');";
 			try {
 				$conn->exec($sql);
 			} catch (PDOException $e) {
@@ -25,6 +26,7 @@
 		<?php echo $error?><br>
 		ID Dosen : <input type="number" name="id_dosen" min="1000000000" max="9999999999" required><br>
 		Nama Dosen : <input type="text" name="nama_dosen" required><br>
+		Password : <input type="password" name="password" required><br>
 		<input type="submit" value="input">
 	</form>
 </body>
