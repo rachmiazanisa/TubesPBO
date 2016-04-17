@@ -40,7 +40,7 @@ public class Dosen extends Orang{
     
     public KelompokTA getKelompok(int index){
         int i=0;
-        while((topikTA[i]!=null)&&i!=index){
+        while((topikTA[i]!=null)&&(i!=index)){
                 i++;
         }
         if(topikTA[i]!=null){
