@@ -88,8 +88,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="LabelNama" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="tfNama" pref="126" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                              <Component id="tfNama" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -101,19 +100,18 @@
                               </Group>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="CBStatus" max="32767" attributes="0"/>
+                                  <Component id="CBStatus" pref="198" max="32767" attributes="0"/>
                                   <Component id="tfGender" max="32767" attributes="0"/>
                                   <Component id="tfTTL" max="32767" attributes="0"/>
                                   <Component id="tfAlamat" max="32767" attributes="0"/>
                                   <Component id="tfNIP" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnSimpan" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnSimpan" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
