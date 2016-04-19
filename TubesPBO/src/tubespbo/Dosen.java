@@ -11,10 +11,47 @@ package tubespbo;
  */
 public class Dosen extends Orang{
     private KelompokTA[] topikTA;
+    private String password;
     private int statusPembimbing;
     private String kodeDosen;
     private int jumlahKelompok;
 
+    public void setTopikTA(KelompokTA[] topikTA) {
+        this.topikTA = topikTA;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setStatusPembimbing(int statusPembimbing) {
+        this.statusPembimbing = statusPembimbing;
+    }
+
+    public void setKodeDosen(String kodeDosen) {
+        this.kodeDosen = kodeDosen;
+    }
+
+    public void setJumlahKelompok(int jumlahKelompok) {
+        this.jumlahKelompok = jumlahKelompok;
+    }
+
+    public KelompokTA[] getTopikTA() {
+        return topikTA;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getKodeDosen() {
+        return kodeDosen;
+    }
+
+    public int getJumlahKelompok() {
+        return jumlahKelompok;
+    }
+    
     public int getStatusPembimbing() {
         return statusPembimbing;
     }
