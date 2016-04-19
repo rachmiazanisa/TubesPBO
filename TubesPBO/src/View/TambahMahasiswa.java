@@ -7,6 +7,7 @@ package View;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /**
@@ -45,9 +46,9 @@ public class TambahMahasiswa extends javax.swing.JFrame {
         tfNIMMhs = new javax.swing.JTextField();
         tfAlamatMhs = new javax.swing.JTextField();
         tfTTLMhs = new javax.swing.JTextField();
-        tfGenderMhs = new javax.swing.JTextField();
-        CBStatusMhs = new javax.swing.JComboBox<>();
+        CBGenderMhs = new javax.swing.JComboBox<>();
         btnSimpan = new javax.swing.JButton();
+        CBStatusMhs1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,9 +74,16 @@ public class TambahMahasiswa extends javax.swing.JFrame {
             }
         });
 
-        CBStatusMhs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lulus", "Belum Lulus" }));
+        CBGenderMhs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Perempuan", "Laki-Laki" }));
+        CBGenderMhs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBGenderMhsActionPerformed(evt);
+            }
+        });
 
         btnSimpan.setText("Simpan");
+
+        CBStatusMhs1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lulus", "Belum Lulus" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -99,8 +107,8 @@ public class TambahMahasiswa extends javax.swing.JFrame {
                             .addComponent(tfNIMMhs)
                             .addComponent(tfAlamatMhs)
                             .addComponent(tfTTLMhs)
-                            .addComponent(tfGenderMhs)
-                            .addComponent(CBStatusMhs, 0, 165, Short.MAX_VALUE))))
+                            .addComponent(CBGenderMhs, 0, 165, Short.MAX_VALUE)
+                            .addComponent(CBStatusMhs1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(81, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -127,14 +135,14 @@ public class TambahMahasiswa extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(tfGenderMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CBGenderMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(CBStatusMhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CBStatusMhs1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSimpan)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
@@ -172,9 +180,14 @@ public class TambahMahasiswa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNIMMhsActionPerformed
 
+    private void CBGenderMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBGenderMhsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBGenderMhsActionPerformed
+
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CBStatusMhs;
+    private javax.swing.JComboBox<String> CBGenderMhs;
+    private javax.swing.JComboBox<String> CBStatusMhs1;
     private javax.swing.JButton btnSimpan;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
@@ -185,7 +198,6 @@ public class TambahMahasiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tfAlamatMhs;
-    private javax.swing.JTextField tfGenderMhs;
     private javax.swing.JTextField tfNIMMhs;
     private javax.swing.JTextField tfNamaMhs;
     private javax.swing.JTextField tfTTLMhs;
@@ -209,12 +221,7 @@ public String getAlamatMhs(){
 public void setAlamatMhs(String s){
     tfAlamatMhs.setText(s);
 }
-public String getGenderMhs(){
-    return tfGenderMhs.getText();
-}
-public void setGenderMhs(String s){
-    tfGenderMhs.setText(s);
-}
+
 public String getTTLMhs(){
     return tfTTLMhs.getText();
 }
@@ -230,8 +237,8 @@ public JTextField getTfNIMMhs(){
 public JTextField getTfAlamatMhs(){
     return tfAlamatMhs;
 }
-public JTextField getTfGenderMhs(){
-    return tfGenderMhs;
+public JComboBox getTfGenderMhs(){
+    return CBGenderMhs;
 }
 public JTextField getTfTTLMhs(){
     return tfTTLMhs;

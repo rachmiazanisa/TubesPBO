@@ -48,9 +48,9 @@ public class NewJFrame3 extends javax.swing.JFrame {
         tfNIP = new javax.swing.JTextField();
         tfAlamat = new javax.swing.JTextField();
         tfTTL = new javax.swing.JTextField();
-        tfGender = new javax.swing.JTextField();
         CBStatus = new javax.swing.JComboBox();
         btnSimpan = new javax.swing.JButton();
+        CBGender = new javax.swing.JComboBox();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Data Diri");
@@ -90,6 +90,8 @@ public class NewJFrame3 extends javax.swing.JFrame {
 
         btnSimpan.setText("Simpan");
 
+        CBGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Perempuan", "Laki-Laki" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -111,10 +113,10 @@ public class NewJFrame3 extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CBStatus, 0, 198, Short.MAX_VALUE)
-                            .addComponent(tfGender)
                             .addComponent(tfTTL)
                             .addComponent(tfAlamat)
-                            .addComponent(tfNIP)))
+                            .addComponent(tfNIP)
+                            .addComponent(CBGender, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnSimpan)))
@@ -142,7 +144,7 @@ public class NewJFrame3 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelGender)
-                    .addComponent(tfGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CBGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelStatus)
@@ -166,7 +168,7 @@ public class NewJFrame3 extends javax.swing.JFrame {
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,6 +199,7 @@ public class NewJFrame3 extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox CBGender;
     private javax.swing.JComboBox CBStatus;
     private javax.swing.JLabel LabelAlamat;
     private javax.swing.JLabel LabelGender;
@@ -209,7 +212,6 @@ public class NewJFrame3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tfAlamat;
-    private javax.swing.JTextField tfGender;
     private javax.swing.JTextField tfNIP;
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfTTL;
@@ -235,12 +237,7 @@ public String getAlamat(){
 public void setAlamat(String s){
     tfAlamat.setText(s);
 }
-public String getGender(){
-    return tfGender.getText();
-}
-public void setGender(String s){
-    tfGender.setText(s);
-}
+
 public String getTTL(){
     return tfTTL.getText();
 } 
@@ -259,8 +256,8 @@ public JTextField getTfAlamat(){
 public JTextField getTfNIP(){
     return tfNIP;
 }
-public JTextField getTfGender(){
-    return tfGender;
+public JComboBox getTfGender(){
+    return CBGender;
 }
 public JTextField getTfTTL(){
     return tfTTL;
