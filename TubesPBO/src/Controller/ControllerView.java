@@ -80,15 +80,18 @@ public class ControllerView extends MouseAdapter implements ActionListener{
         kelolakelompok = new KelolaKelompok();
         kelolakelompok.setVisible(true);
         kelolakelompok.addListener(this);
-        
-                
     } 
     
     
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //To change body of generated methods, choose Tools | Templates.
+        Object source = e.getSource();
+        if (source.equals(menuutama.getBtnDosen())){
+            new Controller
+        }
+    
     }
     
 }
