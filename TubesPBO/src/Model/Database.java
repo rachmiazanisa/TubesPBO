@@ -7,6 +7,7 @@ package Model;
 
 import java.sql.*;
 import tubespbo.Dosen;
+import tubespbo.Mahasiswa;
 
 /**
  *
@@ -47,7 +48,12 @@ public class Database {
     }
     
     public void insertDosen(Dosen d) throws SQLException{
-        String query = "insert into Dosen(nama, kodeDosen, Alamat, ttl, gender, status) values ('" + d.getNama() + "', '" + d.getkodeDosen() + "', '" + d.getAlamat() + "', '" + d.getTtl() + "'. '" + d.getGender() + "', '" + d.getStatusPembimbing() + "');";
+        String query = "insert into Dosen(nama, kodeDosen, alamat, ttl, gender, password) values ('" + d.getNama() + "', '" + d.getkodeDosen() + "', '" + d.getAlamat() + "', '" + d.getTtl() + "'. '" + d.getGender() + "', '" + d.getPassword() + "');";
         stmt.executeQuery(query);
+    }
+    
+    public void insertMahasiswa(Mahasiswa m, String nomorKelompok){
+        String query = "insert into Mahasiswa(nim, statusMahasiswa, password, nama, alamat, ttl, gender, nomorKelompok) values ('" + m.getNim() + "', '" + m.getStatusMahasiswa() + "', " + m.getPassword() + "', '" + m.getNama() + "', '" + m.getAlamat() + "', '" + m.getTtl() + "', '" + m.getGender() + "', '" + nomorKelompok + "');";
+        
     }
 }

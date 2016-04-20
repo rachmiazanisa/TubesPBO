@@ -14,6 +14,7 @@ public class Mahasiswa extends Orang{
     private TugasAkhir tugasAkhir;
     private String statusMahasiswa;
     private String nim;
+    private String password;
 
     public Mahasiswa(String nama, String gender) {
         super(nama, gender);
@@ -25,6 +26,14 @@ public class Mahasiswa extends Orang{
     
     public String getNim(){
         return nim;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
     public void createTA(String judul){
@@ -38,5 +47,8 @@ public class Mahasiswa extends Orang{
     public void setStatusMahasiswa(String statusMahasiswa) {
         this.statusMahasiswa = statusMahasiswa;
     }
-   
+
+    public String getStatusMahasiswa() {
+        return statusMahasiswa;
+    }
 }
