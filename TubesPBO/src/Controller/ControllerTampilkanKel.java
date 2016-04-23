@@ -5,33 +5,38 @@
  */
 package Controller;
 
-import View.LoginDosen;
-import View.NewJFrame2;
+
+import View.ShowKel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import tubespbo.Aplikasi;
+import tubespbo.Dosen;
+import tubespbo.KelompokTA;
 
 /**
  *
  * @author Dian Dwi Arini
  */
-public class ControllerLoginDosen implements ActionListener{
+public class ControllerTampilkanKel implements ActionListener {
     Aplikasi aplikasi;
-    LoginDosen view;
-    
-    public ControllerLoginDosen(Aplikasi aplikasi){
+    ShowKel view;
+    Dosen d;
+    public ControllerTampilkanKel(Aplikasi aplikasi){
         this.aplikasi=aplikasi;
-        LoginDosen view = new LoginDosen();
+        view = new ShowKel();
         view.setVisible(true);
         view.addListener(this);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
-        Object source = e.getSource();
-        
-
-
-//To change body of generated methods, choose Tools | Templates.
+         Object source = e.getSource();
+         if(source.equals(view.getBtnIndex())){
+            d.getKelompok(view.)   //parameternya apa
+         }else if (source.equals(view.getBtnNoKel())){
+             k.getAnggota(nim)
+         }
+             
+         }
+         
     }
-}
+    

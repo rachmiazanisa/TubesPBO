@@ -35,7 +35,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
               <Component id="jInternalFrame1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -43,6 +43,7 @@
   <SubComponents>
     <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
       <Properties>
+        <Property name="title" type="java.lang.String" value="Login Dosen"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -87,7 +88,7 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="38" max="32767" attributes="0"/>
+                  <EmptySpace pref="46" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

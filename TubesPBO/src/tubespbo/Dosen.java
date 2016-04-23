@@ -99,17 +99,6 @@ public class Dosen extends Orang{
         }
     }
     
-    public KelompokTA getKelompokbynum(String nomor){
-        int i=0;
-        while((topikTA[i]!=null) && (topikTA[i].getNomor() != nomor) ){
-                i++;
-        }
-        if(topikTA[i]!=null){
-            return topikTA[i];
-        } else {
-            return null;
-        }
-    }
     
     public KelompokTA getKelompok(String topik){
         int i=0;

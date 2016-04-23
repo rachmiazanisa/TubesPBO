@@ -30,7 +30,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jInternalFrame1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="84" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="80" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -38,7 +38,7 @@
   <SubComponents>
     <Container class="javax.swing.JInternalFrame" name="jInternalFrame1">
       <Properties>
-        <Property name="title" type="java.lang.String" value="Menu Login"/>
+        <Property name="title" type="java.lang.String" value="Dosen"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -57,7 +57,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                  <EmptySpace pref="41" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

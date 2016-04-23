@@ -39,6 +39,7 @@ public class LoginDosen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jInternalFrame1.setTitle("Login Dosen");
         jInternalFrame1.setVisible(true);
 
         tfPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +94,7 @@ public class LoginDosen extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLogin)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -110,7 +111,7 @@ public class LoginDosen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(84, 84, 84)
                 .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
