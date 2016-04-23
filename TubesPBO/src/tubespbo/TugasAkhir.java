@@ -17,6 +17,14 @@ public class TugasAkhir {
     public TugasAkhir(String judul){
         this.judulTA=judul;
     }
+
+    public String getJudulTA() {
+        return judulTA;
+    }
+
+    public void setJudulTA(String judulTA) {
+        this.judulTA = judulTA;
+    }
     
     public void setPembimbing(Dosen d, int i){
         if (i==1){

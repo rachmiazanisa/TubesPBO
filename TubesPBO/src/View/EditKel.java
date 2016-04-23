@@ -5,23 +5,25 @@
  */
 package View;
 
+import java.awt.Component;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
  *
  * @author Dian Dwi Arini
  */
-public class NewJFrame4 extends javax.swing.JFrame {
+public class EditKel extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame4
+     * Creates new form EditKel
      */
-    public NewJFrame4() {
+    public EditKel() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("Login Dosen");
+        this.setTitle("Edit Kelompok TA");
     }
 
     /**
@@ -35,31 +37,25 @@ public class NewJFrame4 extends javax.swing.JFrame {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        tfNIM = new javax.swing.JTextField();
-        btnMasuk = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        tfNoKel = new javax.swing.JTextField();
+        btnCari = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jInternalFrame1.setTitle("Login Mahasiswa");
         jInternalFrame1.setVisible(true);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel2.setText("Masukkan NIM");
+        jLabel1.setText("No Kelompok");
 
-        tfNIM.addActionListener(new java.awt.event.ActionListener() {
+        tfNoKel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNIMActionPerformed(evt);
+                tfNoKelActionPerformed(evt);
             }
         });
 
-        btnMasuk.setText("Masuk");
-        btnMasuk.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMasukActionPerformed(evt);
-            }
-        });
+        btnCari.setText("Cari");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -67,26 +63,24 @@ public class NewJFrame4 extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnMasuk))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCari)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNIM, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)))
-                .addGap(40, 40, 40))
+                        .addComponent(jLabel1)
+                        .addGap(26, 26, 26)
+                        .addComponent(tfNoKel, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(tfNIM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1)
+                    .addComponent(tfNoKel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMasuk)
-                .addGap(0, 13, Short.MAX_VALUE))
+                .addComponent(btnCari)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
@@ -95,19 +89,15 @@ public class NewJFrame4 extends javax.swing.JFrame {
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-=======
-                .addContainerGap(14, Short.MAX_VALUE))
->>>>>>> origin/master
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,40 +114,35 @@ public class NewJFrame4 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasukActionPerformed
+    private void tfNoKelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNoKelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnMasukActionPerformed
+    }//GEN-LAST:event_tfNoKelActionPerformed
 
-    private void tfNIMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNIMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfNIMActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMasuk;
+    private javax.swing.JButton btnCari;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField tfNIM;
+    private javax.swing.JTextField tfNoKel;
     // End of variables declaration//GEN-END:variables
-
-public String getNIM(){
-    return tfNIM.getText();
+public void showMessage(Component c, String s){
+    JOptionPane.showMessageDialog(c,s);
 }
-public void setNIM(String s){
-    tfNIM.setText(s);
+public String getNoKel(){
+    return tfNoKel.getText();
 }
-public JTextField getTfNIM(){
-    return tfNIM;
+public void setNoKel(String s){
+    tfNoKel.setText(s);
 }
-public JButton getBtnMasuk(){
-    return btnMasuk;
+public JTextField getTfNoKel(){
+    return tfNoKel;
+}
+public JButton getBtnCari(){
+    return btnCari;
 }
 public void addListener(ActionListener e){
-    btnMasuk.addActionListener(e);
+    btnCari.addActionListener(e);
 }
 
 

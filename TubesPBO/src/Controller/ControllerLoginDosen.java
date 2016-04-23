@@ -5,6 +5,7 @@
  */
 package Controller;
 
+<<<<<<< HEAD
 import View.NewJFrame2;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,6 +28,32 @@ public class ControllerLoginDosen implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+=======
+import View.LoginDosen;
+import View.NewJFrame2;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import tubespbo.Aplikasi;
+
+/**
+ *
+ * @author Dian Dwi Arini
+ */
+public class ControllerLoginDosen implements ActionListener{
+    Aplikasi aplikasi;
+    LoginDosen view;
+    
+    public ControllerLoginDosen(Aplikasi aplikasi){
+        this.aplikasi=aplikasi;
+        LoginDosen view = new LoginDosen();
+        view.setVisible(true);
+        view.addListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+>>>>>>> origin/master
         
 
 

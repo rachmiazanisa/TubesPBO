@@ -13,15 +13,15 @@ import javax.swing.JTextField;
  *
  * @author Dian Dwi Arini
  */
-public class NewJFrame4 extends javax.swing.JFrame {
+public class BuatTA extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame4
+     * Creates new form BuatTA
      */
-    public NewJFrame4() {
+    public BuatTA() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("Login Dosen");
+        this.setTitle("Buat Judul TA");
     }
 
     /**
@@ -35,31 +35,20 @@ public class NewJFrame4 extends javax.swing.JFrame {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        tfNIM = new javax.swing.JTextField();
-        btnMasuk = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        tfJudul = new javax.swing.JTextField();
+        btnSimpan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jInternalFrame1.setTitle("Login Mahasiswa");
+        jInternalFrame1.setTitle("Mahasiswa-Buat TA");
         jInternalFrame1.setVisible(true);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel2.setText("Masukkan NIM");
+        jLabel1.setText("Masukkan Judul TA");
 
-        tfNIM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNIMActionPerformed(evt);
-            }
-        });
-
-        btnMasuk.setText("Masuk");
-        btnMasuk.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMasukActionPerformed(evt);
-            }
-        });
+        btnSimpan.setText("Simpan");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,25 +57,25 @@ public class NewJFrame4 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(tfJudul, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnMasuk))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNIM, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)))
-                .addGap(40, 40, 40))
+                        .addComponent(btnSimpan)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(tfNIM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1)
+                    .addComponent(tfJudul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMasuk)
-                .addGap(0, 13, Short.MAX_VALUE))
+                .addComponent(btnSimpan)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
@@ -96,11 +85,7 @@ public class NewJFrame4 extends javax.swing.JFrame {
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-=======
-                .addContainerGap(14, Short.MAX_VALUE))
->>>>>>> origin/master
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,40 +109,29 @@ public class NewJFrame4 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasukActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMasukActionPerformed
-
-    private void tfNIMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNIMActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfNIMActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMasuk;
+    private javax.swing.JButton btnSimpan;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField tfNIM;
+    private javax.swing.JTextField tfJudul;
     // End of variables declaration//GEN-END:variables
 
-public String getNIM(){
-    return tfNIM.getText();
+public JButton getBtnSimpan(){
+    return btnSimpan;
 }
-public void setNIM(String s){
-    tfNIM.setText(s);
+public String getjudul(){
+    return tfJudul.getText();
 }
-public JTextField getTfNIM(){
-    return tfNIM;
+public void setJudul(String s){
+    tfJudul.setText(s);
 }
-public JButton getBtnMasuk(){
-    return btnMasuk;
+public JTextField getTfJudul(){
+    return tfJudul;
 }
 public void addListener(ActionListener e){
-    btnMasuk.addActionListener(e);
+    btnSimpan.addActionListener(e);
 }
 
 

@@ -8,6 +8,7 @@ package Controller;
 import View.NewJFrame4;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+<<<<<<< HEAD
 import java.awt.event.FocusListener;
 import tubespbo.Aplikasi;
 import tubespbo.Mahasiswa;
@@ -30,6 +31,24 @@ public class ControllerLoginMahasiswa implements ActionListener{
         
         this.view.getTfNIM().addFocusListener((FocusListener) this);
         this.view.get
+=======
+import tubespbo.Aplikasi;
+
+/**
+ *
+ * @author Dian Dwi Arini
+ */
+public class ControllerLoginMahasiswa implements ActionListener{
+    Aplikasi aplikasi;
+    NewJFrame4 view;
+    
+    public ControllerLoginMahasiswa(Aplikasi aplikasi){
+        this.aplikasi=aplikasi;
+        NewJFrame4 view = new NewJFrame4();
+        view = new NewJFrame4();
+        view.setVisible(true);
+        view.addListener(this);
+>>>>>>> origin/master
     }
 
     @Override
