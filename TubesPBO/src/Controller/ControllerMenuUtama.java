@@ -28,7 +28,7 @@ public class ControllerMenuUtama implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         if (source.equals(view.getBtnDosen())){
-            new ControllerLoginDosen(aplikasi);
+            new ControllerDosen(aplikasi);
             view.dispose();
         }else if (source.equals(view.getBtnMahasiswa())){
             new ControllerLoginMahasiswa(aplikasi);

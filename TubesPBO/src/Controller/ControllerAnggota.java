@@ -5,8 +5,7 @@
  */
 package Controller;
 
-import View.LoginDosen;
-import View.NewJFrame2;
+import View.KelolaAnggota;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import tubespbo.Aplikasi;
@@ -15,23 +14,25 @@ import tubespbo.Aplikasi;
  *
  * @author Dian Dwi Arini
  */
-public class ControllerLoginDosen implements ActionListener{
+public class ControllerAnggota implements ActionListener {
     Aplikasi aplikasi;
-    LoginDosen view;
-    
-    public ControllerLoginDosen(Aplikasi aplikasi){
+    KelolaAnggota view;
+    public ControllerAnggota(Aplikasi aplikasi){
         this.aplikasi=aplikasi;
-        LoginDosen view = new LoginDosen();
+        view = new KelolaAnggota();
         view.setVisible(true);
         view.addListener(this);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        
-
-
-//To change body of generated methods, choose Tools | Templates.
+        if (source.equals(view.getBtnTambah())){
+            new ControllerTambahAnggota(aplikasi);
+            view.dispose();
+        } else if (source.equals(view.getBtnHapus())){
+            new ControllerHapusAnggota(aplikasi);
+            view.dispose();
+        }
     }
+    
 }

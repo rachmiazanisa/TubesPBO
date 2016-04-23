@@ -5,8 +5,10 @@
  */
 package View;
 
+import java.awt.Component;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -172,6 +174,10 @@ public void setNIMHapus(String s){
 public JTextField getTfNIMHapus(){
     return tfNIMHapus;
 }
+
+    public void showMessage(Component c, String s) {
+        JOptionPane.showMessageDialog(c, s);
+    }
 
 
 }

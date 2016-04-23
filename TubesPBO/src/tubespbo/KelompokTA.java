@@ -62,4 +62,7 @@ public class KelompokTA {
     public String getNomor(){
         return this.nomor;
     }
+    public void setNomor(){
+        this.nomor=nomor;
+    }
 }
